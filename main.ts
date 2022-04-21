@@ -1,26 +1,28 @@
 radio.onReceivedNumber(function (receivedNumber) {
     switch (receivedNumber) {
         case 10:
-            pins.servoWritePin(AnalogPin.P0, 0)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
             break;
         case 11:
-            pins.servoWritePin(AnalogPin.P0, 180)
+            pins.digitalWritePin(DigitalPin.P13, 1)
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P14, 1)
             break;
 
         case 20:
-            pins.servoWritePin(AnalogPin.P0, 0)
+            pins.digitalWritePin(DigitalPin.P15, 0)
             break;
         case 21:
-            pins.servoWritePin(AnalogPin.P0, 180)
+            pins.digitalWritePin(DigitalPin.P15, 1)
             break;
         case 30:
-            pins.servoWritePin(AnalogPin.P0, 0)
-            pins.digitalWritePin(DigitalPin.P0, 0)
+            
+            pins.digitalWritePin(DigitalPin.P16, 0)
             break;
         case 31:
-            pins.servoWritePin(AnalogPin.P0, 180)
-            basic.pause(2000)
-            pins.digitalWritePin(DigitalPin.P0, 1)
+            pins.digitalWritePin(DigitalPin.P16, 1)
             break;
     }
 })
